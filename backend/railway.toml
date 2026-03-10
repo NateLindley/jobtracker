@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install --include=dev && node node_modules/typescript/bin/tsc"
+buildCommand = "npm install --include=dev && npm run build"
 
 [deploy]
 startCommand = "node dist/src/index.js"
