@@ -31,7 +31,7 @@ npm run dev
 
 Backend runs at: http://localhost:3001
 
-### 3. Frontend - removed
+### 3. Frontend - removed 2
 
 ```bash
 cd frontend
