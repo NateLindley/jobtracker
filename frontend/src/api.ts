@@ -1,6 +1,6 @@
 import type { JobApplication, Status } from './types';
 
-const BASE = '/api';
+const BASE = `${import.meta.env.VITE_API_URL ?? ''}/api`;
 
 export async function fetchApplications(status?: Status): Promise<JobApplication[]> {
   const url = status ? `${BASE}/applications?status=${status}` : `${BASE}/applications`;
