@@ -2,6 +2,7 @@
   "name": "jobtracker",
   "version": "1.0.0",
   "scripts": {
-    "start": "cd backend && node dist/index.js"
+    "build": "cd backend && npm install --include=dev && npm run build",
+    "start": "cd backend && node dist/src/index.js"
   }
 }
