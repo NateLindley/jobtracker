@@ -1,7 +1,0 @@
-[build]
-builder = "nixpacks"
-buildCommand = "cd frontend && npm install && npm run build"
-
-[deploy]
-startCommand = "find /app -name 'index.html' 2>/dev/null"
-restartPolicyType = "ON_FAILURE"
