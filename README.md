@@ -1,7 +1,7 @@
 # JobTracker
 
 A full-stack job application tracker built with React, Express, Prisma, and PostgreSQL.
-Built as a Postgres learning project covering JSONB, many-to-many relations, transactions, and indexed queries.
+Postgres with JSONB, many-to-many relations, transactions, and indexed queries.
 
 ## Stack
 
