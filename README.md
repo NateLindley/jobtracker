@@ -77,12 +77,3 @@ docker exec -it $(docker ps -qf "ancestor=postgres:16") psql -U jobtracker -d jo
 # SELECT * FROM "JobApplication" WHERE notes->>'salary' IS NOT NULL;
 # SELECT j.company, array_agg(t.name) FROM "JobApplication" j JOIN "_JobApplicationToTag" jt ON j.id = jt."A" JOIN "Tag" t ON t.id = jt."B" GROUP BY j.company;
 ```
-
----
-
-## Interview Talking Points
-
-1. **Why Prisma over raw SQL?** Type safety, migrations, and readable query API — but I can drop to `prisma.$queryRaw` when needed.
-2. **Why index on status?** Low-cardinality columns used in WHERE clauses benefit from indexes; verified with EXPLAIN ANALYZE.
-3. **Why a transaction in PATCH?** Updating many-to-many relations requires disconnect + reconnect — a transaction ensures atomicity.
-4. **Why JSONB for notes?** Flexible, schema-less data that varies per application doesn't warrant its own normalized table.
